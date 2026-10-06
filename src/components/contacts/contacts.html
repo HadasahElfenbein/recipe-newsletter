@@ -1,0 +1,39 @@
+<div class="contact-management">
+    <h1>ניהול אנשי קשר</h1>
+    
+    <button (click)="openAddContactPanel()">הוסף משתמש חדש</button>
+
+    <div *ngIf="isAddContactPanelOpen" class="add-contact-panel">
+        <h2>הוסף איש קשר חדש</h2>
+        <label>
+            שם:
+            <input type="text" [(ngModel)]="newContact.name" />
+        </label>
+        <label>
+            כתובת מייל:
+            <input type="email" [(ngModel)]="newContact.email" />
+        </label>
+        <button (click)="saveContact()">שמור</button>
+        <button (click)="closeAddContactPanel()">סגור</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>שם</th>
+                <th>כתובת מייל</th>
+                <th>פעולות</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact of contacts">
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>
+                    <button (click)="editContact(contact)">עריכה</button>
+                    <button (click)="deleteContact(contact)">מחיקה</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
