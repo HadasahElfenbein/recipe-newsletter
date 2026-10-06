@@ -1,0 +1,77 @@
+html, body {
+  height: 100%;
+  width: 100%; /* מוודא שהגודל של ה-body מתפרס על כל רוחב המסך */
+  margin: 0;
+  overflow: hidden; /* מונע גלילה */
+}
+
+.container {
+  height: 100%; /* לוקח את כל הגובה של המסך */
+  width: 90%; /* לוקח את כל רוחב המסך */
+  text-align: center;
+  padding: 50px;
+  /*background-color: #f9f9f9;*/
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; /* מרכז את התוכן אנכית */
+}
+
+h1 {
+  color: #ff6f61;
+  font-size: 2.5em;
+}
+
+p {
+  color: #777;
+  font-size: 1.2em;
+}
+
+.button-container {
+  margin-top: 30px;
+  display: flex; /* להציג את כפתורים בשורה */
+  justify-content: center;
+}
+
+.btn {
+  border: none;
+  padding: 15px 0; /* ריווח שיגדיל את הגובה */
+  border-radius: 5px;
+  font-size: 2.2em;
+  margin: 10px 5px;
+  cursor: pointer;
+  color: #fff;
+  height: 300px; /* הגובה של הכפתור */
+  width: 300px; /* הרוחב של הכפתור */
+}
+.btn:hover {
+  background-color: #45a049; /* צבע חדש כשמעבירים עליו את העכבר */
+  transform: translateY(-2px); /* הזזת הכפתור קלות כלפי מעלה */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* הצללה כהה יותר */
+  opacity: 0.9; /* הופך את הכפתור מעט שקוף */
+  transition: all 0.3s ease; /* אנימציה חלקה לשינויים */
+}
+
+/* צבעים שונים עבור כפתורים שונים */
+.btn-archive {
+  background-color: #8fd3f4; /* צבע בסיס */
+}
+
+.btn-archive:hover {
+  background-color: #7bc3e1; /* צבע הובר */
+}
+
+.btn-send-email {
+  background-color: #ffabab; /* צבע בסיס */
+}
+
+.btn-send-email:hover {
+  background-color: #ff9f9f; /* צבע הובר */
+}
+
+.btn-manage-contacts {
+  background-color: #ffda77; /* צבע בסיס */
+}
+
+.btn-manage-contacts:hover {
+  background-color: #ffcc44; /* צבע הובר */
+}
