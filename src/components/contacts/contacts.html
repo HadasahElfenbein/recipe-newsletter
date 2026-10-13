@@ -1,0 +1,14 @@
+<!-- contacts.html
+לסדר אדיט ודליט- להבין מה זה אומר 
+-->
+<div class="contacts-list">
+    <h2>רשימת אנשי קשר</h2>
+    @for(let contact of contactList; track contact){
+    <div >
+        <app-single-contact
+            [contact]="contact"
+            (editContact)="updateContact(contact.id)"
+            (deleteContact)="deleteContact(contact.id)">
+        </app-single-contact>
+    </div>}
+</div>
