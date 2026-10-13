@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Contacts } from '../contacts/contacts';
 
 @Component({
   imports: [],
