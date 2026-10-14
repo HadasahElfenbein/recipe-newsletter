@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Contact } from '../../interfaces/Contact.interface';
 
 @Component({
@@ -8,5 +8,7 @@ import { Contact } from '../../interfaces/Contact.interface';
   templateUrl: './single-contact.html',
 })
 export class SingleContact {
-   @Input() contact!: Contact;
+   @Input() contact!:Contact;
+   @Output() deleteContact = new EventEmitter<string>();
+   @Output() editContact = new EventEmitter<string>();
 }

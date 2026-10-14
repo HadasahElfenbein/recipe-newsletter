@@ -1,14 +1,15 @@
-<!-- contacts.html
-לסדר אדיט ודליט- להבין מה זה אומר 
--->
-<div class="contacts-list">
-    <h2>רשימת אנשי קשר</h2>
-    @for(let contact of contactList; track contact){
-    <div >
-        <app-single-contact
-            [contact]="contact"
-            (editContact)="updateContact(contact.id)"
-            (deleteContact)="deleteContact(contact.id)">
-        </app-single-contact>
-    </div>}
+<!-- contacts.html -->
+<div class="container-fluid mt-4">
+    <h2 class="mb-4 text-center">Contacts List</h2>
+    <div class="mx-auto" style="width: 60%; min-width: 350px;">
+        @for(contact of contactList; track contact){
+        <div class="card shadow-sm p-3 mb-3 w-100">
+            <app-single-contact
+                [contact]="contact"
+                (editContact)="updateContact(contact.id)"
+                (deleteContact)="deleteContact(contact.id)">
+            </app-single-contact>
+        </div>
+        }
+    </div>
 </div>

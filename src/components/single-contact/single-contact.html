@@ -1,14 +1,17 @@
 <!-- single-contact.html -->
-<div class="single-contact">
-    <h3>{{ contact.name }}</h3>
-    <p>אימייל: {{ contact.email }}</p>
-    
-    <div class="button-group">
-        <button class="btn btn-warning" (click)="editContact()">
-            <i class="fas fa-pencil-alt"></i> עריכה
+<div class="d-flex justify-content-between align-items-center w-100 py-1">
+    <div style="min-width: 250px;">
+        <h4 class="fw-bold mb-0">{{ contact.name }}</h4>
+    </div>
+    <div class="flex-grow-1 px-3">
+        <span class="text-muted fs-5">{{ contact.email }}</span>
+    </div>
+    <div class="button-group d-flex gap-2">
+        <button class="btn btn-warning px-3" (click)="editContact.emit(contact.id)">
+            ✏️
         </button>
-        <button class="btn btn-danger" (click)="deleteContact()">
-            <i class="fas fa-trash"></i> מחיקה
+        <button class="btn btn-danger px-3" (click)="deleteContact.emit(contact.id)">
+            🗑️
         </button>
     </div>
 </div>
