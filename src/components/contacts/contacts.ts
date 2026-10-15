@@ -29,6 +29,8 @@ deleteContact(contactId: string): void {
 updateContact(contactId: string): void {
   console.log(`Updating contact with ID: ${contactId}`);
 }
+addContact(): void {
+  console.log('Adding a new contact');
 
-
+}
 }
