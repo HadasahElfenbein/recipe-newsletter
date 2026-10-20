@@ -24,7 +24,9 @@ contactList: Contact[] = [
 
 
 deleteContact(contactId: string): void {
-  console.log(`Deleting contact with ID: ${contactId}`);
+  if (window.confirm('האם אתה בטוח שברצונך למחוק?')) {
+    console.log(`Deleting contact with ID: ${contactId}`);
+  }
 }
 updateContact(contactId: string): void {
   console.log(`Updating contact with ID: ${contactId}`);

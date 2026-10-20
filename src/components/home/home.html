@@ -1,8 +1,81 @@
-<div class="container">
-  <h1>ברוכים הבאים למערכת ניהול הניוזלטר למתכונים</h1>
-  <div class="button-container">
-    <button class="btn btn-archive">ארכיון 📁</button>
-    <button class="btn btn-send-email">שליחת מייל 📧</button>
-    <button class="btn btn-manage-contacts">ניהול אנשי קשר 📞</button>
+<main class="min-vh-100 bg-body-tertiary py-4 py-md-5" dir="rtl">
+  <div class="container" style="text-align: center;">
+    <header class="bg-dark bg-gradient text-white rounded-4 shadow-lg p-4 p-md-5 mb-5" >
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="badge rounded-pill text-bg-primary px-3 py-2 mb-3">
+            מערכת ניהול הניוזלטר
+          </span>
+
+          <h1 class="display-5 fw-bold mb-3">
+            כל המתכונים, במקום אחד
+          </h1>
+
+          <p class="lead text-white-50 mb-0">
+            ניהול פשוט של אנשי קשר, שליחת מיילים וארכיון הניוזלטר.
+          </p>
+        </div>
+
+        <div class="col-lg-4 text-lg-start text-center">
+          <span class="display-1" aria-hidden="true">🍽️</span>
+        </div>
+      </div>
+    </header>
+
+    <section aria-labelledby="actions-title">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-2 mb-4">
+        <div>
+          <p class="text-primary fw-semibold mb-1">לוח הבקרה</p>
+          <h2 id="actions-title" class="h3 fw-bold text-dark mb-0">
+            לאן ממשיכים?
+          </h2>
+        </div>
+        <p class="text-secondary mb-0">בחרי פעולה כדי להתחיל</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a
+            routerLink="/archives"
+            class="card h-100 text-decoration-none text-end border-0 shadow-sm rounded-4 p-4"
+          >
+            <span class="fs-1 mb-3" aria-hidden="true">📁</span>
+            <span class="h4 fw-bold text-dark">ארכיון</span>
+            <span class="text-secondary">
+              צפייה בניוזלטרים ובמתכונים קודמים
+            </span>
+            <span class="text-primary fw-semibold mt-4">למעבר לארכיון ←</span>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <button
+            type="button"
+            class="card h-100 w-100 text-end border-0 shadow-sm rounded-4 p-4"
+          >
+            <span class="fs-1 mb-3" aria-hidden="true">✉️</span>
+            <span class="h4 fw-bold text-dark">שליחת מייל</span>
+            <span class="text-secondary">
+              הכנת ניוזלטר ושליחתו לרשימת התפוצה
+            </span>
+            <span class="text-primary fw-semibold mt-4">לשליחת מייל ←</span>
+          </button>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <a
+            routerLink="/contacts"
+            class="card h-100 text-decoration-none text-end border-0 shadow-sm rounded-4 p-4"
+          >
+            <span class="fs-1 mb-3" aria-hidden="true">👥</span>
+            <span class="h4 fw-bold text-dark">ניהול אנשי קשר</span>
+            <span class="text-secondary">
+              הוספה, עדכון וניהול של אנשי הקשר
+            </span>
+            <span class="text-primary fw-semibold mt-4">לניהול אנשי קשר ←</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
-</div>
+</main>
