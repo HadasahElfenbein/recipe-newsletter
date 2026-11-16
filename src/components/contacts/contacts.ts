@@ -26,10 +26,12 @@ contactList: Contact[] = [
 deleteContact(contactId: string): void {
   if (window.confirm('האם אתה בטוח שברצונך למחוק?')) {
     console.log(`Deleting contact with ID: ${contactId}`);
+    //כאן תתבצע בעז"ה קריאה לקובץ שירות שיבצע את מחיקת איש הקשר מהשרת
   }
 }
 updateContact(contactId: string): void {
   console.log(`Updating contact with ID: ${contactId}`);
+  //כאן תתבצע בעז"ה קריאה לקובץ שירות שיבצע את עדכון איש הקשר מהשרת
 }
 addContact(): void {
   console.log('Adding a new contact');
